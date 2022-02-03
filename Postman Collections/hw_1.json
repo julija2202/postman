@@ -7,7 +7,7 @@
   "item": [
     {
       "name": "1_1",
-      "_postman_id": "68fc2b63-cc9f-4cc2-88aa-9e01aaa172af",
+      "id": "68fc2b63-cc9f-4cc2-88aa-9e01aaa172af",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -38,6 +38,19 @@
             }
           ]
         }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "aab5e5f0-486a-4380-b9e2-ed6d1e786034",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
       },
       "response": []
     }
