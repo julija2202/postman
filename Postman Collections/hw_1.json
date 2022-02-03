@@ -52,7 +52,23 @@
         "header": [],
         "body": {
           "mode": "formdata",
-          "formdata": []
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Julija",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "34",
+              "type": "text"
+            },
+            {
+              "key": "salary",
+              "value": "500",
+              "type": "text"
+            }
+          ]
         },
         "url": "http://162.55.220.72:5005/user_info_3"
       },
