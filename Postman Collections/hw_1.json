@@ -233,6 +233,19 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "d33ba0ef-c566-401f-85f9-94f36ddfddb5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
