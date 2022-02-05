@@ -249,14 +249,95 @@
     },
     {
       "name": "New Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "8874927c-5fb8-4900-9813-a2bd9983eadb",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "var resp = pm.response.json ()\r",
+              "var req = request.data\r",
+              "pm.test(\"have_start_qa_salary\", function () {\r",
+              "    pm.expect(resp).to.have.property(\"start_qa_salary\");\r",
+              "});\r",
+              "pm.test(\"have_qa_salary_after_6_months\", function () {\r",
+              "    pm.expect(resp).to.have.property(\"qa_salary_after_6_months\");\r",
+              "});\r",
+              "pm.test(\"have_qa_salary_after_12_months\", function () {\r",
+              "    pm.expect(resp).to.have.property(\"qa_salary_after_12_months\");\r",
+              "});\r",
+              "pm.test(\"have_qa_salary_after_1.5_year\", function () {\r",
+              "    pm.expect(resp).to.have.property(\"qa_salary_after_1.5_year\");\r",
+              "});\r",
+              "pm.test(\"have_qa_salary_after_3.5_years\", function () {\r",
+              "    pm.expect(resp).to.have.property(\"qa_salary_after_3.5_years\");\r",
+              "});\r",
+              "pm.test(\"have_person\", function () {\r",
+              "    pm.expect(resp).to.have.property(\"person\");\r",
+              "});\r",
+              "pm.test(\"start_qa_salary=salary\", function () {\r",
+              "    pm.expect(resp.start_qa_salary).to.eql(parseInt(req.salary));\r",
+              "});\r",
+              "pm.test(\"start_qa_salary_6_months=salary\", function () {\r",
+              "    pm.expect(resp.qa_salary_after_6_months).to.eql(req.salary*2);\r",
+              "});\r",
+              "pm.test(\"start_qa_salary_12_months=salary\", function () {\r",
+              "    pm.expect(resp.qa_salary_after_12_months).to.eql(req.salary*2.7);\r",
+              "});\r",
+              "pm.test(\"start_qa_salary_1.5_year=salary\", function () {\r",
+              "    pm.expect(resp[\"qa_salary_after_1.5_year\"]).to.eql(req.salary*3.3);\r",
+              "});\r",
+              "pm.test(\"start_qa_salary_3.5_years=salary\", function () {\r",
+              "    pm.expect(resp[\"qa_salary_after_3.5_years\"]).to.eql(req.salary*3.8);\r",
+              "});\r",
+              "pm.test(\"person=\", function () {\r",
+              "    pm.expect(resp.person.u_name[1]).to.eql(+req.salary);\r",
+              "});\r",
+              "pm.test(\"age=\", function () {\r",
+              "    pm.expect(resp.person.u_age).to.eql(+req.age);\r",
+              "});\r",
+              "pm.test(\"salary_5 =\", function () {\r",
+              "    pm.expect(resp.person.u_salary_5_years).to.eql(+req.salary*4.2);\r",
+              "});\r",
+              "for (var person in resp.person){\r",
+              "    console.log(\"person.\" +person+ \" = \" + resp.person[person])\r",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "3d87ab1a-1596-4dfe-8f5b-69ab27c92a14",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "{{name}}",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "{{age}}",
+              "type": "text"
+            },
+            {
+              "key": "salary",
+              "value": "{{salary}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://162.55.220.72:5005/user_info_2"
       },
       "response": []
     }
