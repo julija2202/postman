@@ -20,14 +20,72 @@
     },
     {
       "name": "2_2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "ccba5da7-ed58-4c8e-8b7b-6c29f40fd6d0",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "var resp_Data = pm.response.json();\r",
+              "pm.test(\"name\", function () {\r",
+              "    pm.expect(resp_Data.name).to.eql('Julija');\r",
+              "});\r",
+              "pm.test(\"age\", function () {\r",
+              "    pm.expect(resp_Data.age).to.eql('34');\r",
+              "});\r",
+              "pm.test(\"salary\", function () {\r",
+              "    pm.expect(resp_Data.salary).to.eql(500);\r",
+              "});\r",
+              "    var request_Data = request.data;\r",
+              "pm.test(\"name_req\", function () {\r",
+              "    pm.expect(resp_Data.name).to.eql(request_Data.name);\r",
+              "});\r",
+              "pm.test(\"age_req\", function () {\r",
+              "    pm.expect(resp_Data.age).to.eql(request_Data.age);\r",
+              "});\r",
+              "pm.test(\"salary_req\", function () {\r",
+              "    pm.expect(resp_Data.salary).to.eql(parseInt(request_Data.salary));\r",
+              "});\r",
+              "console.log(resp_Data.family)\r",
+              "pm.test(\"resp=req\", function () {\r",
+              "    pm.expect(resp_Data.family.u_salary_1_5_year).to.eql(request_Data.salary*4);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "b172d811-9d6f-4430-af52-e6badbdfe245",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Julija",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "34",
+              "type": "text"
+            },
+            {
+              "key": "salary",
+              "value": "500",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://162.55.220.72:5005/user_info_3"
       },
       "response": []
     }
