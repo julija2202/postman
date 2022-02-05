@@ -101,6 +101,19 @@
         "url": null
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "82a103dd-ec83-434a-98dc-8540604828e6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
