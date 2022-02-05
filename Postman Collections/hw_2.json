@@ -17,6 +17,19 @@
         "url": "http://162.55.220.72:5005/first"
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "b172d811-9d6f-4430-af52-e6badbdfe245",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
