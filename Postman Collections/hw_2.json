@@ -1,0 +1,22 @@
+{
+  "info": {
+    "_postman_id": "56ff42d5-d8da-4c26-89ce-8f8caee1efc6",
+    "name": "HW_2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "_postman_id": "6c5a6824-8308-4fbc-8f24-144516ea969b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://162.55.220.72:5005/first"
+      },
+      "response": []
+    }
+  ]
+}
