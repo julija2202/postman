@@ -49,6 +49,25 @@
     },
     {
       "name": "3_2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "b29ffb4c-8c04-4709-b050-8a01e5830e7b",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "var resp_data= pm.response.json();\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "var resp_data = JSON.parse(pm.request.body.raw)\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "b8d733b0-3575-4432-9d90-847aa1257341",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
