@@ -7,14 +7,43 @@
   "item": [
     {
       "name": "New Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "51e20278-5c74-4f75-9c51-e3bf1df896c3",
+            "exec": [
+              "var resp = pm.response.json ()\r",
+              "var req = request.data\r",
+              "pm.environment.set(\"token\", resp.token)"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "d944dc21-4638-48cf-836e-25a194f649c4",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "login",
+              "value": "julietka",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "artemka",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://162.55.220.72:5005/login"
       },
       "response": []
     }
