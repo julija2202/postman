@@ -56,6 +56,10 @@
       "request": {
         "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{  \"age\" : \"34\" ,\r\n   \"salary\" : \"500\" ,\r\n   \"name\" : \"Julija\" ,\r\n   \"auth_token\" : \"{{token}}\" \r\n}"
+        },
         "url": "http://162.55.220.72:5005/user_info"
       },
       "response": []
