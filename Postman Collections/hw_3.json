@@ -48,15 +48,15 @@
       "response": []
     },
     {
-      "name": "New Request",
+      "name": "3_2",
       "id": "b8d733b0-3575-4432-9d90-847aa1257341",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "url": "http://162.55.220.72:5005/user_info"
       },
       "response": []
     }
