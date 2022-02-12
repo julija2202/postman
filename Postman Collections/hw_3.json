@@ -58,10 +58,9 @@
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
               "});\r",
-              "var resp_data= pm.response.json();\r",
-              "pm.test(\"Status code is 200\", function () {\r",
-              "var resp_data = JSON.parse(pm.request.body.raw)\r",
-              "});\r",
+              "var schema = {\r",
+              "\r",
+              "}\r",
               ""
             ],
             "type": "text/javascript"
