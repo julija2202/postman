@@ -46,6 +46,19 @@
         "url": "http://162.55.220.72:5005/login"
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "b8d733b0-3575-4432-9d90-847aa1257341",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
