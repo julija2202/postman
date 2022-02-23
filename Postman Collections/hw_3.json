@@ -735,9 +735,24 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "auth_token",
+              "value": "{{token}}",
+              "type": "text"
+            },
+            {
+              "key": "curr_code",
+              "value": "567",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://162.55.220.72:5005/curr_byn"
       },
       "response": []
     }
