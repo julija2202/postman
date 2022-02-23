@@ -229,8 +229,7 @@
               "pm.test(\"environment\",function() {\r",
               "var jsonData = pm.response.json();\r",
               "pm.environment.set('salary', jsonData.person.u_salary_1_5_year);\r",
-              "});\r",
-              ""
+              "});"
             ],
             "type": "text/javascript"
           }
