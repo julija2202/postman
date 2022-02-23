@@ -586,6 +586,52 @@
     },
     {
       "name": "3_5",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "a9be1075-dac1-4b45-96b8-ae629d7ca764",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "var schema = {\r",
+              "    \"age\": \"35\",\r",
+              "    \"family\": {\r",
+              "        \"children\": [\r",
+              "            [\r",
+              "                \"Alex\",\r",
+              "                24\r",
+              "            ],\r",
+              "            [\r",
+              "                \"Kate\",\r",
+              "                12\r",
+              "            ]\r",
+              "        ],\r",
+              "        \"u_salary_1_5_year\": 2000\r",
+              "    },\r",
+              "    \"name\": \"Julija\",\r",
+              "    \"salary\": 500\r",
+              "}\r",
+              "pm.test(\"validate\", function () {\r",
+              "    var response = JSON.parse(responseBody); \r",
+              "   pm.expect(tv4.validate(response, schema)).to.be.true\r",
+              "});\r",
+              "pm.test(\"name=name\", function(){\r",
+              "    var JsonData = pm.response.json;\r",
+              "    var req = pm.request.url.query.toObject();\r",
+              "    pm.expect(JsonData.name).toString(req.name)\r",
+              "})\r",
+              "pm.test(\"age=age\", function(){\r",
+              "    var JsonData = pm.response.json;\r",
+              "    var req = pm.request.url.query.toObject();\r",
+              "    pm.expect(JsonData.age).to.eql+(req.age)\r",
+              "})"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "8f37570b-8980-4b38-a969-1cd468c53167",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
