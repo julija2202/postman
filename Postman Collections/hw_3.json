@@ -372,9 +372,7 @@
               "\tvar json = function (a, b) {\r",
               "\tif (a(jsonData.salary[2]) > b(jsonData.salary[0])); } \r",
               "    console.log(\"2-й элемент массив зарплаты больше 0-го\");\r",
-              "});\r",
-              "\r",
-              ""
+              "});"
             ],
             "type": "text/javascript"
           }
