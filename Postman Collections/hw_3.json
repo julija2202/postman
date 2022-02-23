@@ -258,14 +258,93 @@
     },
     {
       "name": "3_3",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "de6e4d2f-87b3-42ef-a4e5-9589c576edef",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "4aa43dd9-f722-4976-b5b5-7244a596419b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "age",
+              "value": "35",
+              "type": "text"
+            },
+            {
+              "key": "salary",
+              "value": "500",
+              "type": "text"
+            },
+            {
+              "key": "name",
+              "value": "Julija",
+              "type": "text"
+            },
+            {
+              "key": "auth_token",
+              "value": "{{token}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://162.55.220.72:5005/new_data",
+          "protocol": "http",
+          "host": [
+            "162",
+            "55",
+            "220",
+            "72"
+          ],
+          "port": "5005",
+          "path": [
+            "new_data"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": "35",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "",
+              "value": "500",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "",
+              "value": "",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "",
+              "value": "",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        }
       },
       "response": []
     }
