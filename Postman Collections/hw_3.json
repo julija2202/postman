@@ -367,7 +367,15 @@
               "    var jsonData = pm.response.json();\r",
               "    var req = pm.request.url.query.toObject()\r",
               "    pm.expect(jsonData.salary[2]).to.eql+(req.salary*3);\r",
-              "});"
+              "});\r",
+              "pm.test( \" 2-й элемент массива зарплата больше 0-го \" , function () {\r",
+              "\tvar jsonData = pm.response.json(); \r",
+              "\tvar json = function (a, b) {\r",
+              "\tif (a(jsonData.salary[2]) > b(jsonData.salary[0])); } \r",
+              "    console.log(\"2-й элемент массив зарплаты больше 0-го\");\r",
+              "});\r",
+              "\r",
+              ""
             ],
             "type": "text/javascript"
           }
