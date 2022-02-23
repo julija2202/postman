@@ -591,9 +591,34 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "age",
+              "value": "35",
+              "type": "text"
+            },
+            {
+              "key": "salary",
+              "value": "500",
+              "type": "text"
+            },
+            {
+              "key": "name",
+              "value": "Julija",
+              "type": "text"
+            },
+            {
+              "key": "auth_token",
+              "value": "{{token}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://162.55.220.72:5005/get_test_user"
       },
       "response": []
     }
