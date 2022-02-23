@@ -583,6 +583,19 @@
         "url": "http://162.55.220.72:5005/test_pet_info"
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "8f37570b-8980-4b38-a969-1cd468c53167",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
