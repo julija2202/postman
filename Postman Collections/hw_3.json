@@ -458,14 +458,54 @@
     },
     {
       "name": "3_4",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "5955bfe1-b699-4bdc-80fd-ed5e8bd79eb6",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "691d644c-503e-49eb-ae7b-179c94934c6d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "age",
+              "value": "35",
+              "type": "text"
+            },
+            {
+              "key": "weight",
+              "value": "171",
+              "type": "text"
+            },
+            {
+              "key": "name",
+              "value": "Julija",
+              "type": "text"
+            },
+            {
+              "key": "auth_token",
+              "value": "{{token}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://162.55.220.72:5005/test_pet_info"
       },
       "response": []
     }
