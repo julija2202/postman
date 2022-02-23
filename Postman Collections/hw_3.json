@@ -532,7 +532,17 @@
               "pm.test(\"validate\", function () {\r",
               "    var response = JSON.parse(responseBody); \r",
               "   pm.expect(tv4.validate(response, schema)).to.be.true\r",
-              "});"
+              "});\r",
+              "pm.test(\"weight*0.0012\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    var req = pm.request.url.query.toObject()\r",
+              "    pm.expect(jsonData.daily_food).to.eql+(req.weight*0.0012);\r",
+              "});\r",
+              "pm.test(\"weight*2.5\", function() {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    var req = pm.request.url.query.toObject()\r",
+              "    pm.expect(jsonData.daily_sleep).to.eql+(req.weight*2.5);\r",
+              "})"
             ],
             "type": "text/javascript"
           }
