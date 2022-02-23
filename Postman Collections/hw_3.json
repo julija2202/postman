@@ -255,6 +255,19 @@
         "url": "http://162.55.220.72:5005/user_info"
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "4aa43dd9-f722-4976-b5b5-7244a596419b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
