@@ -354,7 +354,10 @@
               "    },\r",
               "    \"additionalProperties\": true\r",
               "}\r",
-              ""
+              "pm.test(\"validate\", function () {\r",
+              "    var response = JSON.parse(responseBody); \r",
+              "   pm.expect(tv4.validate(response, schema)).to.be.true\r",
+              "});"
             ],
             "type": "text/javascript"
           }
