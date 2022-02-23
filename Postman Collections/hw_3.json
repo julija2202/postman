@@ -667,6 +667,19 @@
         "url": "http://162.55.220.72:5005/get_test_user"
       },
       "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "a10ee6cc-2ad9-4552-9ac3-045c3afada4a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ]
 }
