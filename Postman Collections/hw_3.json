@@ -670,6 +670,22 @@
     },
     {
       "name": "3_6",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "779c6e08-cd1b-4ec3-aba8-6648abf44542",
+            "exec": [
+              "var jsonData = pm.response.json();\r",
+              "const values = Object.values(jsonData);\r",
+              "const randomCur_ID = values[parseInt(Math.random() * values.length)];\r",
+              "console.log(randomCur_ID);\r",
+              "pm.environment.set(\"Cur_ID\", randomCur_ID.Cur_ID);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "a10ee6cc-2ad9-4552-9ac3-045c3afada4a",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
