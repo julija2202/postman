@@ -675,9 +675,40 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
-        "url": null
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "auth_token",
+              "value": "{{token}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://162.55.220.72:5005/currency",
+          "protocol": "http",
+          "host": [
+            "162",
+            "55",
+            "220",
+            "72"
+          ],
+          "port": "5005",
+          "path": [
+            "currency"
+          ],
+          "query": [
+            {
+              "key": "auth_token",
+              "value": "{{token}}",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        }
       },
       "response": []
     }
